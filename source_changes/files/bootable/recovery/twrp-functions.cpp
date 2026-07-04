@@ -1495,9 +1495,11 @@ string TWFunc::Check_For_TwrpFolder() {
 		LOGINFO("No recovery folder found. Using default folder.\n");
 		if (android::base::GetProperty(TW_FASTBOOT_MODE_PROP, "0") != "1") {
 			TWPartition* SDCard = PartitionManager.Find_Partition_By_Path(DataManager::GetCurrentStoragePath());
-			if (SDCard->Mount(true)) {
+			if (SDCard != nullptr && SDCard->Mount(true)) {
 				mainPath += TW_DEFAULT_RECOVERY_FOLDER;
 				mkdir(mainPath.c_str(), 0777);
+			} else if (SDCard == nullptr) {
+				LOGINFO("No current storage partition is available; skipping recovery folder creation.\n");
 			}
 		}
 		goto exit;
