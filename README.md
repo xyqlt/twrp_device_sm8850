@@ -100,7 +100,6 @@ When adding a new device:
 - TeamWin Recovery Project team for the base TWRP open source code
 - AOSP project for the Android system open source base
 - Qualcomm for open source QCOM kernel and device tree resources
-- All custom recovery community devs for shared public fixes and testing support
 
 ## License
 See individual device trees and source files for their respective licenses.
