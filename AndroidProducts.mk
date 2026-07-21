@@ -3,8 +3,4 @@ PRODUCT_MAKEFILES := \
 
 COMMON_LUNCH_CHOICES := \
     twrp_annibale-eng \
-    twrp_annibale-bp2a-eng \
-    twrp_annibale-ap2a-eng \
-    twrp_annibale-ap3a-eng \
-    twrp_annibale-trunk_staging-eng \
-    twrp_annibale-trunk-eng
+    twrp_annibale-userdebug
